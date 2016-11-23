@@ -17,11 +17,18 @@ namespace MVVM.ViewModel
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<ILanguageService, LanguageService>();
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<MDIContainerViewModel>();
         }
 
         public MainViewModel Main
         {
             get { return ServiceLocator.Current.GetInstance<MainViewModel>(); }
+        }
+
+        public MDIContainerViewModel MainContainer
+        {
+            get { return ServiceLocator.Current.GetInstance<MDIContainerViewModel>(); }
+
         }
     }
 }

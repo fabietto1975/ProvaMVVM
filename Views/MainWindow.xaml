@@ -18,3 +18,4 @@
         <Label Name="lblSelectedLanguage" Content="{Binding Path=LinguaGenerazione.Name}" Margin="261,148,-261.333,-148"></Label>
     </Grid>
 </Window>
+    
